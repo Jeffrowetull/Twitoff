@@ -14,6 +14,7 @@ python-decouple = "*"
 basilica = "*"
 numpy = "*"
 sklearn = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
