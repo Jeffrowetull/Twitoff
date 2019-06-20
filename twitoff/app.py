@@ -48,4 +48,10 @@ def create_app():
         return render_template('prediction.html',
                                title='Prediction', message=message)
 
+    @app.route('/reset')
+    def reset():
+        DB.drop_all()
+        DB.create_all()
+        add_users()
+        return render_template('base.html', title='Reset databse!')
     return app
