@@ -53,5 +53,5 @@ def create_app():
         DB.drop_all()
         DB.create_all()
         add_users()
-        return render_template('base.html', title='Reset databse!')
+        return render_template('base.html', title='Reset database!')
     return app
