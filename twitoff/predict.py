@@ -1,5 +1,5 @@
 '''Prediction of user based on tweet embeddings'''
-import numpy as numpy
+import numpy as np
 from sklearn.linear_model import LogisticRegression
 from .models import User
 from .twitter import BASILICA
