@@ -40,3 +40,18 @@ def add_or_update_user(username):
         DB.session.commit()
     DB.session.add(db_user)
     DB.session.commit()
+
+
+def add_users(users=TWITTER_USERS):
+    '''
+    Add/update a list of users (strings of user names).
+    May take awhile, so run 'offline' (flask shell).
+    '''
+    for user in users:
+        add_or_update_user(user)
+
+
+def update_all_users():
+    '''Update all tweets for all users in the user table.'''
+    for user in User.query.all():
+        add_or_update_user(user.name)
